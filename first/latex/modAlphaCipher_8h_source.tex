@@ -1,0 +1,37 @@
+\hypertarget{modAlphaCipher_8h_source}{}\doxysection{mod\+Alpha\+Cipher.\+h}
+\mbox{\hyperlink{modAlphaCipher_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <locale>}}
+\DoxyCodeLine{15 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{classmodAlphaCipher}{modAlphaCipher}}}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19 \textcolor{keyword}{private}:}
+\DoxyCodeLine{21     std::wstring \mbox{\hyperlink{classmodAlphaCipher_ab7e0c7d3c87f4c8b7435d84f31c6cb62}{numAlpha}} = L\textcolor{stringliteral}{"{}АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"{}};}
+\DoxyCodeLine{23     std::map <char,int> \mbox{\hyperlink{classmodAlphaCipher_a300fd2a7ab35fff0a84c9772953b7907}{alphaNum}}; \textcolor{comment}{//ассоциативный массив "{}номер по символу"{}}}
+\DoxyCodeLine{25 \textcolor{comment}{}    std::vector <int> \mbox{\hyperlink{classmodAlphaCipher_aaddfb3bc0a3806b17e94c56fea5bad87}{key}}; \textcolor{comment}{//ключ}}
+\DoxyCodeLine{36 \textcolor{comment}{}    std::vector<int> \mbox{\hyperlink{classmodAlphaCipher_a12ace58352c18bac7a7b61f312a4c8d6}{convert}}(\textcolor{keyword}{const} std::wstring\& s);}
+\DoxyCodeLine{47     std::wstring \mbox{\hyperlink{classmodAlphaCipher_ac86303da1bf6467d3afd928a0e781f97}{convert}}(\textcolor{keyword}{const} std::vector<int>\& v);}
+\DoxyCodeLine{53     std::wstring \mbox{\hyperlink{classmodAlphaCipher_a36544c603bcd87edcc33df0c8fa26c9f}{getValidKey}}(\textcolor{keyword}{const} std::wstring \& s);}
+\DoxyCodeLine{59     std::wstring \mbox{\hyperlink{classmodAlphaCipher_ad3866804da711149328560753005dd1a}{getValidText}}(\textcolor{keyword}{const} std::wstring \& s);}
+\DoxyCodeLine{60 \textcolor{keyword}{public}:}
+\DoxyCodeLine{62     \mbox{\hyperlink{classmodAlphaCipher_a4f0a86c20f5d836f66cb1e640d875e6b}{modAlphaCipher}}()=\textcolor{keyword}{delete};}
+\DoxyCodeLine{72     \mbox{\hyperlink{classmodAlphaCipher_a314fca132f4e74faca280b7c1fad7cb5}{modAlphaCipher}}(\textcolor{keyword}{const} std::wstring\& skey); }
+\DoxyCodeLine{91     std::wstring \mbox{\hyperlink{classmodAlphaCipher_a5edc499881373a275a3cd14f0cab6c19}{encrypt}}(\textcolor{keyword}{const} std::wstring\& open\_text);}
+\DoxyCodeLine{110     std::wstring \mbox{\hyperlink{classmodAlphaCipher_a941eab79d9ec1a8de4e1f9cf2a80ff35}{decrypt}}(\textcolor{keyword}{const} std::wstring\& cipher\_text);}
+\DoxyCodeLine{111 \};}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{114 \textcolor{keyword}{class }\mbox{\hyperlink{classcipher__error}{cipher\_error}}: \textcolor{keyword}{public} std::invalid\_argument}
+\DoxyCodeLine{115 \{}
+\DoxyCodeLine{116 \textcolor{keyword}{public}:}
+\DoxyCodeLine{117     \textcolor{keyword}{explicit} \mbox{\hyperlink{classcipher__error}{cipher\_error}} (\textcolor{keyword}{const} std::string\& what\_arg): }
+\DoxyCodeLine{118         std::invalid\_argument(what\_arg) \{\}}
+\DoxyCodeLine{119     \textcolor{keyword}{explicit} \mbox{\hyperlink{classcipher__error}{cipher\_error}} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* what\_arg):}
+\DoxyCodeLine{120         std::invalid\_argument(what\_arg) \{\}}
+\DoxyCodeLine{121 \};}
+
+\end{DoxyCode}
