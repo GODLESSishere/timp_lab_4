@@ -1,0 +1,35 @@
+\hypertarget{Cipher_8h_source}{}\doxysection{Cipher.\+h}
+\mbox{\hyperlink{Cipher_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{14 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{classCipher}{Cipher}}}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18 \textcolor{keyword}{private}:}
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} \mbox{\hyperlink{classCipher_aa466e24ce38c3c21d59f796ab8a811dc}{k}};}
+\DoxyCodeLine{21     wstring getValidOpenText(\textcolor{keyword}{const} std::wstring \& s);}
+\DoxyCodeLine{22     wstring getValidCipherText(\textcolor{keyword}{const} std::wstring \& s);}
+\DoxyCodeLine{23     \textcolor{keywordtype}{int} getValidKey(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{classCipher_aa466e24ce38c3c21d59f796ab8a811dc}{k}}, \textcolor{keyword}{const} std::wstring \& s);}
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{26     \mbox{\hyperlink{classCipher_ae728d0917db639dd49638a268298391f}{Cipher}}()=\textcolor{keyword}{delete};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{30     \mbox{\hyperlink{classCipher_a18781eba7ae36d2314577fa362e12ace}{Cipher}}(\textcolor{keywordtype}{int} w);}
+\DoxyCodeLine{72     wstring \mbox{\hyperlink{classCipher_a2ad7df814cbccea470ead91a6d810d43}{zakodirovat}}(\mbox{\hyperlink{classCipher}{Cipher}} w, wstring\& s);}
+\DoxyCodeLine{112     wstring \mbox{\hyperlink{classCipher_a21269fbac594e2bb9d6cd0d431efa6c3}{raskodirovat}}(\mbox{\hyperlink{classCipher}{Cipher}} w, wstring\& s);}
+\DoxyCodeLine{113 \};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117 \textcolor{keyword}{class }\mbox{\hyperlink{classcipher__error}{cipher\_error}}: \textcolor{keyword}{public} std::invalid\_argument}
+\DoxyCodeLine{118 \{}
+\DoxyCodeLine{119 \textcolor{keyword}{public}:}
+\DoxyCodeLine{120     \textcolor{keyword}{explicit} \mbox{\hyperlink{classcipher__error}{cipher\_error}} (\textcolor{keyword}{const} std::string\& what\_arg):}
+\DoxyCodeLine{121         std::invalid\_argument(what\_arg) \{\}}
+\DoxyCodeLine{122     \textcolor{keyword}{explicit} \mbox{\hyperlink{classcipher__error}{cipher\_error}} (\textcolor{keyword}{const} \textcolor{keywordtype}{char}* what\_arg):}
+\DoxyCodeLine{123         std::invalid\_argument(what\_arg) \{\}}
+\DoxyCodeLine{124 \};}
+
+\end{DoxyCode}
